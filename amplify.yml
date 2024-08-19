@@ -8,9 +8,8 @@ frontend:
     build:
       commands:
         - npm run build # 또는 'yarn build'
-        - npm run export # 정적 파일로 내보내기
   artifacts:
-    baseDirectory: front/out # 빌드된 정적 파일 위치
+    baseDirectory: front/.next # 빌드된 파일 위치
     files:
       - '**/*'
   cache:
