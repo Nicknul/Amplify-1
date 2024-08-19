@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm install # 또는 'yarn install'
+        - npm ci --cache .npm --prefer-offline # 또는 'yarn install'
     build:
       commands:
         - npm run build # 또는 'yarn build'
@@ -13,5 +13,5 @@ frontend:
       - '**/*'
   cache:
     paths:
-      - 'node_modules/**/*' # Cache `node_modules` for faster `yarn` or `npm i`
-      - '.next/cache/**/*' #
+      - 'front/.next/cache/**/*'
+      - 'front/.npm/**/*' #
