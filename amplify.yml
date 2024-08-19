@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd front # 'front' 디렉토리로 이동
+        - npm install # 의존성 설치
+    build:
+      commands:
+        - npm run build # 또는 'yarn build'
+  artifacts:
+    baseDirectory: front/.next # 빌드된 파일이 위치하는 디렉토리
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - front/node_modules/**/* # 캐시 경로 설정
