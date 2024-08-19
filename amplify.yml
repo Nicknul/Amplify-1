@@ -3,7 +3,6 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd front # front 디렉토리로 이동
         - npm install # 또는 'yarn install'
     build:
       commands:
@@ -14,5 +13,5 @@ frontend:
       - '**/*'
   cache:
     paths:
-      - 'front/node_modules/**/*' # Cache `node_modules` for faster `yarn` or `npm i`
-      - 'front/.next/cache/**/*' #
+      - 'node_modules/**/*' # Cache `node_modules` for faster `yarn` or `npm i`
+      - '.next/cache/**/*' #
