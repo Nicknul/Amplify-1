@@ -8,7 +8,7 @@ frontend:
     build:
       commands:
         - npm run build # 또는 'yarn build'
-        -npm run export
+        - npm run export
   artifacts:
     baseDirectory: front/.next # 빌드된 파일이 위치하는 디렉토리
     files:
