@@ -8,10 +8,10 @@ frontend:
       commands:
         - npm run build # 또는 'yarn build'
   artifacts:
-    baseDirectory: .next # 빌드된 파일 위치
+    baseDirectory: front/.next # 빌드된 파일 위치
     files:
       - '**/*'
   cache:
     paths:
-      - '.next/cache/**/*'
-      - '.npm/**/*' #
+      - 'front/.next/cache/**/*'
+      - 'front/.npm/**/*' #
